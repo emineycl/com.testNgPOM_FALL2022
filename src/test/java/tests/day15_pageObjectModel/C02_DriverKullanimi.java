@@ -44,7 +44,7 @@ public class C02_DriverKullanimi {
         softAssert.assertTrue(actualUrl.contains(arananUrlKelime),"url wisequarter icermiyor");
         softAssert.assertAll();
 
-        ReusableMethods.bekle(5);
+        ReusableMethods.wait(5);
         Driver.closeDriver();
     }
 }

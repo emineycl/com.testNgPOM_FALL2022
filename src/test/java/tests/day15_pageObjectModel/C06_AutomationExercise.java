@@ -34,17 +34,21 @@ public class C06_AutomationExercise {
 
         //4. Click on ‘Signup / Login’ button
         AutomationExercisePage automationExercisePage=new AutomationExercisePage();
-        ReusableMethods.bekle(2);
+        ReusableMethods.wait(2);
         automationExercisePage.signUpLinki.click();
 
         //5. Verify ‘Login to your account’ is visible
         softAssert.assertTrue(automationExercisePage.loginAccountElementi.isDisplayed());
 
         //6. Enter correct email address and password
+        automationExercisePage.emailKutusu.sendKeys("aurora@gmail.com");
+        automationExercisePage.passwordKutusu.sendKeys("aurora");
 
         //7. Click ‘login’ button
+        automationExercisePage.loginButonu.click();
 
         //8. Verify that ‘Logged in as username’ is visible
+        softAssert.assertTrue(automationExercisePage.loggedinAs.isDisplayed());
 
         //9. Click ‘Delete Account’ button
 
@@ -53,7 +57,7 @@ public class C06_AutomationExercise {
 
 
         softAssert.assertAll();
-        ReusableMethods.bekle(3);
+        ReusableMethods.wait(3);
         Driver.closeDriver();
     }
 

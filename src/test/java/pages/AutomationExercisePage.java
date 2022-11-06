@@ -12,7 +12,7 @@ public class AutomationExercisePage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(linkText = " Signup / Login")
+    @FindBy(xpath = "//*[text()=' Signup / Login']")
     public WebElement signUpLinki;
 
     @FindBy(xpath = "//h2[text()='Login to your account']")
@@ -26,4 +26,12 @@ public class AutomationExercisePage {
 
     @FindBy(xpath = "//button[text()='Login']")
     public WebElement loginButonu;
+
+    @FindBy(xpath = "")
+    public WebElement loggedinAs;
+
+    @FindBy(xpath = "")
+    public WebElement deleteAcountButuno;
+
+
 }

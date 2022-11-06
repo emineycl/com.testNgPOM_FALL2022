@@ -23,10 +23,10 @@ public class C04_PagesKullanimi {
         String expectedKelime="nutella";
         Assert.assertTrue(actualAramaSonucu.contains(expectedKelime));
 
-        ReusableMethods.bekle(3);
+        ReusableMethods.wait(3);
         Driver.closeDriver();
     }
-    @Test(dependsOnMethods = "bicycleTesti")
+    @Test(dependsOnMethods = "bicycleTesti", groups = "smoke")
     public void javaTesti(){
         amazonPage.aramakutusu.clear();
         amazonPage.aramakutusu.sendKeys("java"+Keys.ENTER);
@@ -35,7 +35,7 @@ public class C04_PagesKullanimi {
         Assert.assertTrue(actualAramaSonucu.contains(expectedKelime));
 
     }
-    @Test
+    @Test(groups = "smoke")
     public void bicycleTesti(){
         Driver.getDriver().get("https://www.amazon.com");
         amazonPage.aramakutusu.sendKeys("bicycle"+ Keys.ENTER);

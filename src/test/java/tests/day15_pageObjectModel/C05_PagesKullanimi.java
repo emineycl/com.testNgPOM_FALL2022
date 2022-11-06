@@ -31,6 +31,6 @@ public class C05_PagesKullanimi {
         //4- Basarili giris yapilamadigini test edin
         Assert.assertTrue(faceBookPage.girilemediYaziElementi.isDisplayed());
 
-        ReusableMethods.bekle(5);
+        ReusableMethods.wait(5);
     }
 }
