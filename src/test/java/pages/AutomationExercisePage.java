@@ -27,11 +27,13 @@ public class AutomationExercisePage {
     @FindBy(xpath = "//button[text()='Login']")
     public WebElement loginButonu;
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//*[text()=' Logged in as ']")
     public WebElement loggedinAs;
+    @FindBy(xpath = "//a[@href='/delete_account']")
+    public WebElement deleteAccountButton;
 
-    @FindBy(xpath = "")
-    public WebElement deleteAcountButuno;
+    @FindBy (xpath = "//*[text()='Account Deleted!']")
+    public WebElement accountDeletedlocation;
 
 
 }

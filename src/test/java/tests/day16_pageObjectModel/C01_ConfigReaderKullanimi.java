@@ -1,5 +1,6 @@
 package tests.day16_pageObjectModel;
 
+import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AmazonPage;
@@ -18,7 +19,7 @@ public class C01_ConfigReaderKullanimi {
 
     //Nutella icin arama yapip,
         AmazonPage amazonPage=new AmazonPage();
-        amazonPage.aramakutusu.sendKeys(ConfigReader.getProperty("amazonAramaKelimesi"));
+        amazonPage.aramakutusu.sendKeys(ConfigReader.getProperty("amazonAramaKelimesi" )+ Keys.ENTER);
     // sonuclarin arama yaptigimiz kelimeyi icerdigini test edin.
 
         String expectedKelime=ConfigReader.getProperty("amazonAramaKelimesi");
