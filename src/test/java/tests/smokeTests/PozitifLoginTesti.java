@@ -1,5 +1,6 @@
 package tests.smokeTests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.MyCoursedemyPage;
 import utilities.ConfigReader;
@@ -32,7 +33,7 @@ public class PozitifLoginTesti {
         myCoursedemyPage.loginButonu.click();
 
         //Basarili olarak giris yapildiginni test edin
-
+        Assert.assertTrue(myCoursedemyPage.coursesLinki.isDisplayed());
 
     }
 }
