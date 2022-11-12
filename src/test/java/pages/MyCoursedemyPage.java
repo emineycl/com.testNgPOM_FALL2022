@@ -7,11 +7,13 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 public class MyCoursedemyPage {
+
+
   public   MyCoursedemyPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
     @FindBy (xpath="//a[text()='Log in']")
-    public WebElement loginlinki;
+    public WebElement loginLinki;
 
     @FindBy (xpath = "//input[@id='login-email']")
     public WebElement emailKutusu;
@@ -62,7 +64,7 @@ public class MyCoursedemyPage {
   public WebElement backToCourseListButonu;
 
     public void loginMethodu(){
-      loginlinki.click();
+      loginLinki.click();
       emailKutusu.sendKeys(ConfigReader.getProperty("myGecerliEmail"));
       passwordKutusu.sendKeys(ConfigReader.getProperty("myGecerliPassword"));
       loginButonu.click();
