@@ -1,4 +1,4 @@
-package tests.day14_dependsOnMethods;
+package tests.day14_dependsOnMethods_softAssert;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
