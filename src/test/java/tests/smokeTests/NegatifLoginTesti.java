@@ -24,7 +24,7 @@ public class NegatifLoginTesti {
    // Mycoursedemy anasayfasina gidin
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
     // login linkine basin
-        myCoursedemyPage.loginlinki.click();
+        myCoursedemyPage.loginLinki.click();
     }
 
     // uc farkli test method'u ile yanlis bilgilerle giris yapilamadigini test edin
@@ -39,7 +39,7 @@ public class NegatifLoginTesti {
 
         // Basarili olarak giris yapilamadigini test edin
         //bunun icin login linkinin görunur oldugunu test edelim
-        Assert.assertTrue(myCoursedemyPage.loginlinki.isEnabled());
+        Assert.assertTrue(myCoursedemyPage.loginLinki.isEnabled());
     }
     @Test
     public void yanlisPasswordTesti(){
@@ -51,7 +51,7 @@ public class NegatifLoginTesti {
         myCoursedemyPage.loginButonu.click();
 
         // Basarili olarak giris yapilamadigini test edin
-        Assert.assertTrue(myCoursedemyPage.loginlinki.isEnabled());
+        Assert.assertTrue(myCoursedemyPage.loginLinki.isEnabled());
 
     }
     @Test
@@ -64,7 +64,7 @@ public class NegatifLoginTesti {
         myCoursedemyPage.loginButonu.click();
 
         // Basarili olarak giris yapilamadigini test edin
-        Assert.assertTrue(myCoursedemyPage.loginlinki.isEnabled());
+        Assert.assertTrue(myCoursedemyPage.loginLinki.isEnabled());
 }
 
 
